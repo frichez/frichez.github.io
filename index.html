@@ -24,11 +24,13 @@
 
           data.addColumn('datetime', 'Time');
           data.addColumn('number', 'Temp');
+          data.addColumn('number', 'Temp ext');
 
           $.each(results, function (i, row) {
             data.addRow([
               (new Date(row.timestamp)),
-              parseFloat(row.temp)
+              parseFloat(row.temp),
+              parseFloat(row.temp_ext)
             ]);
           });
 
