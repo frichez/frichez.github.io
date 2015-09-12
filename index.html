@@ -16,7 +16,7 @@
         // JSONP request
         var jsonData = $.ajax({
           url: 'https://data.sparkfun.com/output/' + public_key + '.json',
-          data: {page: 1},
+          //data: {page: 1},
           dataType: 'jsonp',
         }).done(function (results) {
 
@@ -50,8 +50,8 @@
                    },
                    vAxes: {
                      // Adds titles to each axis.
-                     0: {title: 'Temps (Celsius)'},
-                     1: {title: 'Temps (Celsius)'}
+                     0: {title: 'Temp', titleTextStyle: {color: '#3366cc'}},
+                     1: {title: 'Temp ext', titleTextStyle: {color: '#dc3912'}}
                    },
           });
 
